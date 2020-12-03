@@ -1,5 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/mydeb/git'
 let g:netrw_dirhist_2='/home/mydeb/git/dotfiles'
 let g:netrw_dirhist_3='/home/mydeb/git/dotfiles/.vim'
+let g:netrw_dirhist_4='/git/ba-pr/flexbison'
+let g:netrw_dirhist_5='/git/ba-pr/workflows-mine'
+let g:netrw_dirhist_6='/git/ba-pr/workflows-mine/dbs'
+let g:netrw_dirhist_7='/git/ba-pr/workflows-mine'
+let g:netrw_dirhist_8='/var/log/mysql'
