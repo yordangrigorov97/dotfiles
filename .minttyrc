@@ -17,3 +17,4 @@ Cyan=63,192,192
 BoldCyan=168,226,226
 White=192,192,192
 BoldWhite=224,224,224
+ThemeFile=flat-ui

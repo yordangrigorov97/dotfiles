@@ -1,22 +1,28 @@
-"From changemewtf vim-no-plugins
-set nocompatible
-syntax enable
-filetype plugin on
-set path+=**
-map <Leader>t :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
-     
-         
-         
+"LEADER MAPPINGS
+nnoremap <Leader>t :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
+"nnoremap <leader>h :set hlsearch!<cr> 
+nnoremap <leader>vv :e $MYVIMRC<CR>
+nnoremap <leader>vt :e ~/.tmux.conf<CR>
+nnoremap <leader>vr :source $MYVIMRC<CR>
+nnoremap <leader>nh :nohlsearch<cr> 
+"nnoremap <leader>nn :set nu! rnu!<CR>
+nnoremap <leader>nn :set nu!<CR>
 
-let g:netrw_banner=0        " disable annoying banner
+"NETRW
+let g:netrw_banner=0
 "let g:netrw_browse_split=4  " open in prior window
 "let g:netrw_altv=1          " open splits to the right
 "let g:netrw_liststyle=3     " tree view
 "let g:netrw_list_hide=netrw_gitignore#Hide()
 "let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
-"My mappings
-set nu rnu
+"MY MAPPINGS
+set nocompatible
+syntax enable
+filetype plugin on
+set path+=**
+"set nu rnu
+set nu
 set wildmenu
 set wildmode=longest:list,full
 
