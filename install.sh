@@ -4,6 +4,7 @@
 # https://stackoverflow.com/questions/4774054/reliable-way-for-a-bash-script-to-get-the-full-path-to-itself
 dotfilesdir=$(dirname "$0")
 echo $dotfilesdir
+echo $(dirname $(realpath -s $0))
 excluded=".git README.md install.sh"
 included=".bash_"
 #finish sometime :)
@@ -14,11 +15,13 @@ rm ~/.bash_profile
 rm ~/.vim
 rm ~/.minttyrc
 rm ~/.tmux.conf
+rm ~/.inputrc
 rm ~/bin
 ln -s $dotfilesdir/.bash_profile ~/.bash_profile
 ln -s $dotfilesdir/.vim ~/.vim
 ln -s $dotfilesdir/.minttyrc ~/.minttyrc
 ln -s $dotfilesdir/.tmux.conf ~/.tmux.conf
+ln -s $dotfilesdir/.inputrc ~/.inputrc
 ln -s $dotfilesdir/bin ~/bin
 
 #download ack - ack already in bin

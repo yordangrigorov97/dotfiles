@@ -42,3 +42,11 @@ fi
 # if [ -d "${HOME}/info" ]; then
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
+
+EDITOR='vim'
+export EDITOR
+
+#set -o emacs
+bind '"\ee": vi-editing-mode'
+#set -o vi
+bind '"\ee": emacs-editing-mode'

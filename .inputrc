@@ -1,0 +1,22 @@
+set bell-style none
+
+set colored-stats on
+set colored-completion-prefix on
+
+set completion-ignore-case on
+#correct - to _ or vice versa
+set completion-map-case on
+
+# skip ringing the bell if #matches>1
+set show-all-if-ambiguous on
+
+#^D I think?
+#set echo-control-characters off
+
+#set menu-complete-display-prefix on
+$if Bash
+ Tab: menu-complete
+ # showkey for shift-tab
+ "\e[Z": menu-complete-backward
+$endif
+
