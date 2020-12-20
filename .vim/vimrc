@@ -1,5 +1,5 @@
 "LEADER MAPPINGS
-nnoremap <Leader>t :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
+nnoremap <Leader>t :let $VIM_DIR=expand('%:p:h')<CR>:terminal ++curwin<CR>cd $VIM_DIR<CR>
 "nnoremap <leader>h :set hlsearch!<cr> 
 nnoremap <leader>vv :e $MYVIMRC<CR>
 nnoremap <leader>vt :e ~/.tmux.conf<CR>
@@ -7,19 +7,45 @@ nnoremap <leader>vr :source $MYVIMRC<CR>
 nnoremap <leader>nh :nohlsearch<cr> 
 "nnoremap <leader>nn :set nu! rnu!<CR>
 nnoremap <leader>nn :set nu!<CR>
+nnoremap <leader>s :set spell!<CR>
+
+nnoremap <leader>z :call TabToggle()<cr>
+function! TabToggle()
+  if tabpagewinnr(tabpagenr(), '$') > 1
+    " Zoom in when this tab has more than one window
+    tab split
+  elseif tabpagenr('$') > 1
+    " Zoom out when this tab is not the last tab
+    if tabpagenr() < tabpagenr('$')
+      tabclose
+      tabprevious
+    else
+      tabclose
+    endif
+  endif
+endfunction
+
+"F MAPPINGS
+nmap <F6> :exec '!'.getline('.')
+"nmap <F6> :exec '!'@"
+
+"OTHER MAPPINGS
+nnoremap <space> za
 
 "NETRW
 let g:netrw_banner=0
 "let g:netrw_browse_split=4  " open in prior window
 "let g:netrw_altv=1          " open splits to the right
-"let g:netrw_liststyle=3     " tree view
+let g:netrw_liststyle=3     " tree view
 "let g:netrw_list_hide=netrw_gitignore#Hide()
 "let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
-"MY MAPPINGS
+"SETTINGS
 set nocompatible
 syntax enable
 filetype plugin on
+set foldmethod=indent
+set foldnestmax=999
 "set path+=**
 "set nu rnu
 set nu

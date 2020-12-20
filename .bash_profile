@@ -46,7 +46,9 @@ fi
 EDITOR='vim'
 export EDITOR
 
+alias ls='ls -F'
+
 #set -o emacs
-bind '"\ee": vi-editing-mode'
+#bind '"\ee": vi-editing-mode'
 #set -o vi
-bind '"\ee": emacs-editing-mode'
+#bind '"\ee": emacs-editing-mode'

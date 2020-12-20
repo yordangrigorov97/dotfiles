@@ -19,6 +19,7 @@ rm -f ~/.minttyrc
 rm -f ~/.tmux.conf
 rm -f ~/.inputrc
 # creating ~/bin as a symlink will delete files in the repo when the user: rm -r bin
+rm -d -f ~/.mintty
 rm -d -f ~/bin
 
 ln -s $dotfilesdir/.bash_profile ~/.bash_profile
@@ -26,7 +27,10 @@ ln -s $dotfilesdir/.vim ~/.vim
 ln -s $dotfilesdir/.minttyrc ~/.minttyrc
 ln -s $dotfilesdir/.tmux.conf ~/.tmux.conf
 ln -s $dotfilesdir/.inputrc ~/.inputrc
+ln -s $dotfilesdir/.mintty ~/.mintty
+
 # alternatively, ack already in bin
+# making ~/bin a symlink messes up with git (why?)
 mkdir ~/bin
 curl https://beyondgrep.com/ack-v3.4.0 > ~/bin/ack
 chmod 0755 ~/bin/ack

@@ -1,4 +1,5 @@
 set bell-style none
+#set bell-style visible
 
 set colored-stats on
 set colored-completion-prefix on
