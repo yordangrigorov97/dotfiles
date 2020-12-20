@@ -28,6 +28,7 @@ ln -s $dotfilesdir/.minttyrc ~/.minttyrc
 ln -s $dotfilesdir/.tmux.conf ~/.tmux.conf
 ln -s $dotfilesdir/.inputrc ~/.inputrc
 ln -s $dotfilesdir/.mintty ~/.mintty
+ln -s $dotfilesdir/.ssh ~/.ssh
 
 # alternatively, ack already in bin
 # making ~/bin a symlink messes up with git (why?)
