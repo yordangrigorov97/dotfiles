@@ -1,14 +1,13 @@
 "LEADER MAPPINGS
 nnoremap <Leader>t :let $VIM_DIR=expand('%:p:h')<CR>:terminal ++curwin<CR>cd $VIM_DIR<CR>
-"nnoremap <leader>h :set hlsearch!<cr> 
-nnoremap <leader>vv :e $MYVIMRC<CR>
-nnoremap <leader>vt :e ~/.tmux.conf<CR>
-nnoremap <leader>vr :source $MYVIMRC<CR>
-nnoremap <leader>nh :nohlsearch<cr> 
+nnoremap <leader>v :e $MYVIMRC<CR>
+nnoremap <leader><space> :e ~/.tmux.conf<CR>
+nnoremap <leader>r :source $MYVIMRC<CR>
+nnoremap <leader>h :nohlsearch<cr> 
 "nnoremap <leader>nn :set nu! rnu!<CR>
-nnoremap <leader>nn :set nu!<CR>
+nnoremap <leader>n :set nu!<CR>
 nnoremap <leader>s :set spell!<CR>
-
+nnoremap <leader>` :set hidden!<CR>
 nnoremap <leader>z :call TabToggle()<cr>
 function! TabToggle()
   if tabpagewinnr(tabpagenr(), '$') > 1

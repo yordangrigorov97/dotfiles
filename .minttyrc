@@ -1,7 +1,11 @@
-ThemeFile=mytheme
+ThemeFile=dracula
 Term=xterm-256color
 BellType=0
 Scrollbar=none
 BoldAsFont=yes
 FontSmoothing=full
 CursorType=block
+Font=Consolas
+FontHeight=11
+FontWeight=400
+FontIsBold=no
